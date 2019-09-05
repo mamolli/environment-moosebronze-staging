@@ -25,6 +25,7 @@ pipeline {
       steps {
         container('maven') {
           dir('env') {
+            echo "HI FROM JX"
             sh 'jx step helm apply'
           }
         }
